@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    banner-mode: off
+#  datasource:
+#    url: jdbc:h2:mem:users_db
+#    driver-class-name: org.h2.Driver
+#    username: h2
+#    password:
+#  second-datasource:
+#    url: jdbc:h2:mem:admins_db
+#    driver-class-name: org.h2.Driver
+#    username: h21
+#    password:
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: none
+#  sql:
+#    init:
+#      data-locations: classpath:db/users/create_users.sql, classpath:db/users/insert_users.sql
+  h2:
+    console:
+      enabled: true

@@ -1,0 +1,5 @@
+rootProject.name = 'spring-practice'
+
+include 'h2'
+include 'model'
+include 'multi-db'

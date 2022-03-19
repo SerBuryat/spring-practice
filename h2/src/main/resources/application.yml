@@ -1,0 +1,18 @@
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:h2:./usr/data/users_db;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: users
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+        data-locations: classpath:create_users.sql, classpath:insert_users.sql
+  h2:
+    console:
+      enabled: true

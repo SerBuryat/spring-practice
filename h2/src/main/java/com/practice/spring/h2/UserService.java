@@ -1,4 +1,4 @@
-package com.practice.spring.h2.h2;
+package com.practice.spring.h2;
 
 import com.practice.spring.model.user.User;
 import java.util.List;

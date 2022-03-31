@@ -1,7 +1,5 @@
-package com.practice.spring.h2.h2;
+package com.practice.spring.kafka;
 
-import com.practice.spring.model.user.User;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Artem Anosov
  */
 @RestController
+@RequestMapping("kafka")
 @RequiredArgsConstructor
-@RequestMapping("users")
-public class UserController {
+public class KafkaController {
 
-    private final UserService userService;
+    private final KafkaProducer kafkaProducer;
 
-    @GetMapping
-    public List<User> getAll() {
-        return userService.getAll();
+    @GetMapping("send")
+    public String sendMsgToTestKafkaTopic() {
+        kafkaProducer.sendMessageToTestTopic();
+        return "message sent...";
     }
 }

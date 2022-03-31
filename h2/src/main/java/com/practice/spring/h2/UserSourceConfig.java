@@ -1,4 +1,4 @@
-package com.practice.spring.h2.h2;
+package com.practice.spring.h2;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;

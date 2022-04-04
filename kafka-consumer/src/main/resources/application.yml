@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    banner-mode: off
+
+  datasource:
+    url: jdbc:h2:mem:users_db
+    driver-class-name: org.h2.Driver
+    username: users
+    password:
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+  h2:
+    console:
+      enabled: true
+
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: user-consumer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+
+    consumers:
+      user:
+        topic-name: user-topic
+        auto-startup: true

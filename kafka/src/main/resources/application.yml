@@ -1,6 +1,10 @@
 spring:
   main:
     banner-mode: off
+
   kafka:
-    consumer:
-      auto-offset-reset: earliest
+    topics:
+      user:
+        name: user-topic
+        partition: 1
+        replicas: 1

@@ -1,0 +1,12 @@
+spring:
+  main:
+    banner-mode: off
+
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    producers:
+      user:
+        topic-name: user-topic

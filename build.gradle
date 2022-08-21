@@ -1,12 +1,10 @@
 plugins {
-    id 'io.franzbecker.gradle-lombok' version '4.0.0' apply false
     id 'org.springframework.boot' version '2.5.5' apply false
     id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
 }
 
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'io.franzbecker.gradle-lombok'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
@@ -20,5 +18,11 @@ subprojects {
 
     tasks.named('test') {
         useJUnitPlatform()
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+
+        annotationProcessor 'org.projectlombok:lombok'
     }
 }

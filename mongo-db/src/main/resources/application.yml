@@ -1,0 +1,11 @@
+spring:
+  main:
+    banner-mode: off
+  data:
+    mongodb:
+      database: spring-practice-db
+      host: localhost
+      port: 27017
+      username: root
+      password: example
+      auto-index-creation: true

@@ -2,7 +2,7 @@ spring:
   main:
     banner-mode: off
   datasource:
-    url: jdbc:h2:./usr/data/users_db;AUTO_SERVER=TRUE
+    url: jdbc:h2:mem:users_db
     driver-class-name: org.h2.Driver
     username: users
     password:
@@ -16,3 +16,11 @@ spring:
   h2:
     console:
       enabled: true
+      settings:
+        web-allow-others: true
+
+springdoc:
+  packages-to-scan: com.practice.spring.h2
+  paths-to-match: /**
+  api-docs:
+    path: /api-docs
